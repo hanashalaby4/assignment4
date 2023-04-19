@@ -47,14 +47,22 @@ int main()
 
 void insertAfter(vector<int>& v, int first, int second)
 {
-	for (int i=0;i<v.size(); i++) //iterates through the vector
-	{
-		if (v[i] == first) {
-			v.insert(v.begin()+i + 1, second);
-			i++;//inserts the second value specified directly after the first occurence
-			//of the first value specified
+	//for (int i=0;i<v.size(); i++) //iterates through the vector
+	//{
+	//	if (v[i] == first) {
+	//		v.insert(v.begin()+i + 1, second);
+	//		i++;//inserts the second value specified directly after each occurence
+	//		//of the first value specified
+	//	}
+	//
+	//}
+	for (std::vector<int>::iterator it = v.begin(); it != v.end(); /* no increment here */) {
+		if (*it == first) {
+			// Insert the second value specified directly after the current occurrence of the first value specified
+			it = v.insert(it + 1, second);
+			it++; // Skip the newly inserted element
 		}
-	
+		it++; // Move to the next element in the vector
 	}
 }
 

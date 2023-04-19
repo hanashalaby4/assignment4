@@ -64,9 +64,11 @@ void LinkedList::remove(int v) { //removes a node given a its value
 void LinkedList::print() const { //prints the nodes
 	Node* current = head;
 	while (current) {
-		cout << current->value << " (" << current->occurences << ") -> ";
+		cout << current->value<< " -> ";
 		current = current->next;
 	}
+
+
 	
 }
 
