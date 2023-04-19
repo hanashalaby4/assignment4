@@ -47,11 +47,11 @@ int main()
 
 void insertAfter(vector<int>& v, int first, int second)
 {
-	for (vector<int>::iterator it = v.begin();it!=v.end();it++) //iterates through the vector
+	for (int i=0;i<v.size(); i++) //iterates through the vector
 	{
-		if (*it == first) {
-			v.insert(it + 1, second); 
-			return;//inserts the second value specified directly after the first occurence
+		if (v[i] == first) {
+			v.insert(v.begin()+i + 1, second);
+			i++;//inserts the second value specified directly after the first occurence
 			//of the first value specified
 		}
 	

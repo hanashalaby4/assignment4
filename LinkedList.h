@@ -7,7 +7,7 @@ class LinkedList {
 
 public:
 	struct Node {
-		int value, occurences;
+		int value=0, occurences=0;
 		Node* next;
 	};
 	LinkedList(); //constructor
