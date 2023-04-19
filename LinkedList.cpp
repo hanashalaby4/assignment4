@@ -74,7 +74,7 @@ int LinkedList::sum() {
 	int sum = 0;
 	Node* current = head;
 	while (current) {
-		sum += current->value * current->occurences; //adds the value of the node multiplied by the number of times it is repeated to the total
+		sum += current->value; //adds the value of the node multiplied by the number of times it is repeated to the total
 		current = current->next;
 	}
 	return sum;
