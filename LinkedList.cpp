@@ -91,17 +91,17 @@ LinkedList LinkedList::fromVector(const std::vector<int>& v) {
 		int value = v[i];
 
 		// Check if the value has not been added to the list already
-		bool alreadyAdded = false;
+		bool alreadyAdded = false; //flag is false
 		Node* current = list.head;
 		while (current) {
 			if (current->value == value) {
-				alreadyAdded = true;
+				alreadyAdded = true; //if found, set to true
 				break;
 			}
 			current = current->next;
 		}
 
-		if (!alreadyAdded) { //skip if the value is already in the vector
+		if (!alreadyAdded) { //skip if the value is already in the vector 
 			int o = count(v.begin(), v.end(), value);
 			                                          //counts the value's repetitions in the vector from v.begin to v.end
 			list.add(value, o);                       // and stores it in the variable o
