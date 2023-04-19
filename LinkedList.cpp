@@ -67,7 +67,7 @@ void LinkedList::print() const { //prints the nodes
 		cout << current->value << " (" << current->occurences << ") -> ";
 		current = current->next;
 	}
-	cout << "empty list" << endl;
+	
 }
 
 int LinkedList::sum() {
